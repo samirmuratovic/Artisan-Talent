@@ -10,43 +10,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Artisan Talent: Creative Staffing Agency</title>
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="wrapper">
-      <div class="brand">
-        <img src="assets/logo.jpg" alt="artisan logo">
+      <div id="navbar">
+        <div id="brand">
+            <img src="assets/logo.jpg" alt="artisan logo">
+        </div>
+        <div id="nav-menu">
+          <nav>
+            <ul>
+              <li><a class="dark" href="#">Home</a></li>
+              <li><a class="dark" href="#">About</a></li>
+              <li><a class="dark" href="#">Find Work</a></li>
+              <li><a class="dark" href="#">Talent</a></li>
+              <li><a class="dark" href="#">Companies</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Find Work</li>
-          <li>Talent</li>
-          <li>Companies</li>
-        </ul>
-      </nav>
     </div> <!-- End wrapper -->
   </header>
+  <div class="clearfix"></div>
   <section id="hero">
-    <div id="video">
-      <video src="assets/typing.mp4" autoplay="autoplay" loop="loop" muted="muted">
-      </video>
-    </div>
     <div id="video-content">
-      <h1>Creative Staffing Agency</h1>
-      <div class="text">We may not be scientists - but we win awards</div>
-      <a href="#" class="primary-btn">Find Work</a>
+      <video id="video" src="assets/office.mp4" autoplay="autoplay" loop="loop" muted="muted">
+      </video>
+      <div id="video-copy">
+        <div id="title">
+        <h1 id="main-headline">Creative Staffing Agency</h1>
+        <div class="text">We may not be scientists - but we win awards</div>
+        <a href="#" class="primary-cta main">Find Work</a>
+      </div>
+      </div>
     </div>
   </section>
   <section class="stats">
     <div class="wrapper">
-      <div class="class">
-        <h2>53 Jobs</h2>
+      <div class="stat">
+        <div class="circle-icon">
+          <i class="fas fa-circle-notch"></i>
+        </div>
+        <div class="stat-line">
+          <h2><span class="huge-emphasis">53</span> Jobs</h2>
+        </div>
         <div class="blue-line"></div>
-        <div class="stat-copy">We update our jobs by the minute. Be sure to check back often for the latest digital, creative, and marketing job openings.</div>
+        <div class="stat-copy">
+          <p>We update our jobs by the minute. Be sure to check back often for the latest digital, creative, and marketing job openings.</p>
+        </div>
       </div>
     </div> <!-- End wrapper -->
   </section>
