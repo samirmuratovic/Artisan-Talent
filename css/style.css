@@ -19,7 +19,7 @@ html {
 body {
   font-family: 'Lato', helvetica, sans-serif;
   font-size: 100%;
-  line-height: 1.4;
+  line-height: 1.8;
   background-color: #fff;
 }
 
@@ -39,8 +39,8 @@ h2 {
 
 h3 {
   font-family: 'Futura', helvetica, sans-serif;
-  font-size: 1.9em;
-  font-weight: 300;
+  font-size: 1.8em;
+  font-weight: 100;
   text-transform: uppercase;
 }
 
@@ -82,6 +82,8 @@ a {
   display: table;
 }
 
+/* TODO: Name a class buttons to put all generic css relating to the ctas */
+
 .primary-cta {
   background-color: #000;
   color: #fff;
@@ -89,6 +91,31 @@ a {
   padding: 15px 30px;
   font-weight: bold;
   border-radius: 30px;
+}
+
+.secondary-cta {
+  background-color: #a4d7f8;
+  color: #000;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.tertiary-cta {
+  background-color: #4effa5;
+  color: #000;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.primary-cta:hover, .secondary-cta:hover, .tertiary-cta:hover {
+  color: #000;
+  background-color: #fff;
+  transition: color .8s;
+  transition: background-color .8s;
 }
 
 /* Header */
@@ -177,13 +204,6 @@ header a:active {
   margin: auto;
 }
 
-#hero a:hover {
-  color: #000;
-  background-color: #fff;
-  transition: color .8s;
-  transition: background-color .8s;
-}
-
 /* Stat Section  */
 
 .stats {
@@ -231,22 +251,21 @@ header a:active {
 }
 
 .copy-wrapper {
-  /* height: 400px; */
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .copy-one {
   flex-basis: 50%;
-  padding: 100px 50px;
+  padding: 100px 80px;
   background-color: #a4d7f8;
   height: 100%;
 }
 
 .copy-two {
   flex-basis: 50%;
-  padding: 100px 50px;
+  padding: 100px 80px;
   background-color: #000;
   height: 100%;
 }
@@ -254,14 +273,190 @@ header a:active {
 .two-box-cta p {
   padding: 20px 0;
   margin-bottom: 20px;
-  width: 70%;
+  width: 85%;
 }
 
-.secondary-cta {
+.two-box-cta h2 {
+  margin-top: -20px;
+}
+
+/* Awards Section  */
+
+#awards {
+  background-color: #15161a;
+  margin: 100px 0;
+  padding: 120px 0;
+}
+
+#award-logos {
+  display: flex;
+  overflow: hidden;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.award-logo {
+  flex-basis: 25%;
+  padding: 20px 0;
+  /* margin: 0 -35px; */
+}
+
+.award-logo img {
+  width: 100px;
+  opacity: 1;
+  transition: opacity .4s;
+}
+
+.award-logo img:hover {
+  opacity: 0.40;
+}
+
+#award-copy {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#award-copy p {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 35px;
+  padding: 35px 0;
+}
+
+#award-copy a {
+  margin: auto;
+}
+
+#ernst {
+  width: 220px;
+}
+
+#forbes {
+  width: 150px;
+}
+
+/* Footer Top */
+
+#footer-top {
+  background-color: #15161a;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 10px;
+  color: #fff;
+}
+
+#question {
+  flex-basis: 45%;
+}
+
+.vertical-line {
+  background-color: #4effa5;
+  width: 3px;
+  height: 15px;
+}
+
+/* Footer Mid  */
+
+#footer-mid {
   background-color: #a4d7f8;
-  color: #000;
-  text-transform: uppercase;
-  padding: 15px 30px;
-  font-weight: bold;
-  border-radius: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 0;
+}
+
+#office-logo {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-basis: 20%;
+  justify-content: space-around;
+}
+
+#list-offices {
+  display: flex;
+  flex-basis: 70%;
+  /* padding: 0 50px; */
+  
+}
+
+.office {
+  padding: 0 30px;
+  flex-basis: 25%;
+}
+
+.fa-building {
+  font-size: 2em;
+}
+
+/* Footer Bottom  */
+
+#footer-btm {
+  margin: 100px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#social-links {
+  display: flex;
+  flex-flow: row nowrap;
+  /* padding: 10px 0; */
+}
+
+.social-link {
+  padding: 0 10px;
+  font-size: 1.5em;
+  transition: color .3s;
+}
+
+.social-link:hover {
+  color: #a4d7f8;
+}
+
+#privacy-links {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; 
+}
+
+.privacy-links a {
+  padding: 0 20px;
+  color: inherit;
+  transition: color .3s;
+}
+
+.privacy-links:hover {
+  color: #a4d7f8;
+}
+
+.horizontal-line {
+  height: 3px;
+  width: 50px;
+  background-color: #a4d7f8;
+}
+
+#copyright {
+  padding: 15px 0;
+}
+
+#author-brand {
+  margin-top: 50px;
+  color: #9fa1a4;
+}
+
+#author-brand a {
+  font-family: 'Futura', helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: inherit;
+}
+
+#author-brand a:hover {
+  color: #a4d7f8;
 }
