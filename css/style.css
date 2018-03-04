@@ -280,6 +280,112 @@ header a:active {
   margin-top: -20px;
 }
 
+/* Two Box Quotes Section */
+
+#quote-section-wrapper {
+  margin: 0px 0 100px 0;
+}
+
+.copy-quote {
+  flex-basis: 50%;
+  padding: 75px 80px;
+  background-color: #a4d7f8;
+  height: 100%;
+}
+
+.copy-quote p {
+  padding: 20px 0;
+  width: 100%;
+  font-style: italic;
+}
+
+.copy-icon {
+  flex-basis: 50%;
+  padding: 100px 50px;
+  background-color: #fff;
+  height: 100%;
+  color: inherit;
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.reverse {
+  flex-flow: row-reverse nowrap;
+}
+
+.black {
+  background-color: #000;
+  color: #9fa1a4;
+}
+
+#quoter {
+  font-size: 1em;
+  font-style: normal;
+}
+
+.fa-quote-left {
+  font-size: 2.0em;
+}
+
+.fa-comments {
+  font-size: 3.5em;
+}
+
+.fa-users {
+  font-size: 3.5em;
+}
+
+#comment-icon {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+/* Headline Section */
+
+.headline {
+  height: 700px;
+  padding: 50px 0;
+}
+
+.page-title-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -40px;
+}
+
+#headline-copy-one {
+  background-color: #eee;
+  height: auto;
+  margin-right: 20%;
+  padding: 30px 65px;
+  text-transform: none;
+  /* padding: 30px 5%; */
+  /* width: 80%; */
+}
+
+/* #headline-copy-one h2 {
+  font-family: 'Lato', helvetica, sans-serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  text-transform: none;
+} */
+
+#headline-copy-two {
+  background-color: #a4d7f8;
+  height: auto;
+  margin-left: 20%;
+  padding: 30px 65px;
+}
+
+
+
+
+
 /* Awards Section  */
 
 #awards {
@@ -299,7 +405,6 @@ header a:active {
 .award-logo {
   flex-basis: 25%;
   padding: 20px 0;
-  /* margin: 0 -35px; */
 }
 
 .award-logo img {
