@@ -122,6 +122,13 @@ a {
 
 #navbar {
   height: 110px;
+  width: 100%;
+  border-bottom: 2px solid #ddd;
+  position: fixed;
+  z-index: 20;
+  background-color: #fff;
+  padding: 0 5%;
+  /* visibility: hidden; */
 }
 
 #brand img {
@@ -130,6 +137,10 @@ a {
 
 #brand {
   float: left;
+}
+
+#brand:hover {
+  opacity: .65;
 }
 
 header li {
@@ -142,7 +153,7 @@ header li {
   padding-top: 40px;
 }
 
-header a {
+nav a {
   font-size: 1.3em;
   font-weight: 600;
   text-transform: uppercase;
@@ -151,19 +162,15 @@ header a {
   transition: border-bottom .8s;
 }
 
-header a:hover {
+nav a:hover, .active-page {
   border-bottom: 5px solid #15161a;
-}
-
-header a:active {
-  border-bottom: 5px solid #15161a;
-  /* TODO: apply classes in HTML to indicate active link */
 }
 
 /* Hero */
 
 #hero {
   overflow: hidden;
+  margin-top: 110px;
 }
 
 #video {
@@ -225,6 +232,8 @@ header a:active {
   margin: 0 40px;
 }
 
+
+
 .stat-line {
   flex-basis: 30%;
   text-align: right;
@@ -269,14 +278,14 @@ header a:active {
   flex-basis: 50%;
   padding: 100px 80px;
   background-color: #a4d7f8;
-  height: 100%;
+  /* height: auto; */
 }
 
 .copy-two {
   flex-basis: 50%;
   padding: 100px 80px;
   background-color: #000;
-  height: 100%;
+  /* height: auto; */
 }
 
 .two-box-cta p {
@@ -351,8 +360,10 @@ header a:active {
 /* Headline Section */
 
 .headline {
-  height: 700px;
+  height: auto;
   padding: 50px 0;
+  margin-bottom: 50px;
+  /* margin-top: 10px; */
 }
 
 .page-title-wrapper {
@@ -361,6 +372,7 @@ header a:active {
   justify-content: flex-start;
   align-items: center;
   margin-left: -40px;
+  margin-top: 110px;
 }
 
 #headline-copy-one {
@@ -369,16 +381,7 @@ header a:active {
   margin-right: 20%;
   padding: 30px 65px;
   text-transform: none;
-  /* padding: 30px 5%; */
-  /* width: 80%; */
 }
-
-/* #headline-copy-one h2 {
-  font-family: 'Lato', helvetica, sans-serif;
-  font-size: 1.6em;
-  font-weight: 400;
-  text-transform: none;
-} */
 
 #headline-copy-two {
   background-color: #a4d7f8;
@@ -486,8 +489,6 @@ header a:active {
 #list-offices {
   display: flex;
   flex-basis: 70%;
-  /* padding: 0 50px; */
-  
 }
 
 .office {
@@ -605,4 +606,249 @@ tr:hover {
 
 #author-brand a:hover {
   color: #a4d7f8;
+}
+
+/* Media Queries  */
+
+@media(max-width: 1170px) {
+  .office {
+    padding: 0 8px;
+    flex-basis: 25%;
+  }
+}
+
+@media(max-width: 1100px) {
+  h1 { 
+    font-size: 4.5em;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media(max-width: 978px) {
+  h1 {
+    font-size: 2.0em;
+  }
+  header li {
+    padding: 0 5px;
+  }
+  .text {
+    font-size: 1.0em;
+  }
+}
+
+@media(max-width: 900px) {
+  #navbar {
+    height: 175px;
+  }
+  #brand {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  #nav-menu {
+    float: none;
+    margin: auto;
+    padding: 10px 0;
+    text-align: center;
+  }
+  header li {
+    width: 100%;
+    margin: auto;
+  }
+  #hero {
+    margin-top: 175px;
+  }
+  .page-title-wrapper {
+    margin-top: 175px;
+  }
+  .headline {
+    height: auto;
+  }
+  .copy-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .copy-one {
+    flex-basis: 90%;
+    padding: 100px 50px;
+  }
+  .copy-two {
+    flex-basis: 90%;
+    padding: 100px 50px;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  #footer-mid {
+    background-color: #a4d7f8;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+  }
+  
+  #office-logo {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-basis: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #list-offices {
+    display: flex;
+    flex-flow: column wrap;
+    flex-basis: 100%; 
+    align-items: center;   
+  } 
+  
+  .office {
+    padding: 10px 40px;
+    flex-basis: 25%;
+  }
+}
+
+@media(max-width: 780px) {
+  .stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+  }
+  .stat .blue-line {
+    height: 5px;
+    width: 50%;
+    background-color: #a4d7f8;
+    flex-basis: 100%;
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+  
+  .stat-line {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  
+  .stat-copy {
+    flex-basis: 100%;
+  }
+  
+  .huge-emphasis {
+    font-size: 3.5em;
+  }
+  
+  .circle-icon {
+    display: none;
+  }
+  #footer-top {
+    background-color: #15161a;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 10px;
+    color: #fff;
+  }
+  .vertical-line {
+    display: none;
+  }
+  #question {
+    padding-bottom: 20px;
+  }
+  #phone {
+    padding-top: 20px;
+  }
+}
+
+@media(max-width: 600px) {
+  nav a {
+    font-size: 1em;
+    font-weight: 500; 
+  }
+  .stat .blue-line {
+    width: 100%;
+  }
+  .huge-emphasis {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1em;
+  }
+  #award-logos {
+    display: flex;
+    overflow: hidden;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+  h2 {
+    font-size: 1.0em;
+  }
+  h3 {
+    font-size: 0.9em;
+  }
+  #headline-copy-one {
+    margin-right: 0;
+  }
+  
+  #headline-copy-two {
+    margin-left: 0;
+  }
+}
+
+@media(max-width: 530px) {
+  .text {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width: 460px) {
+  nav a {
+    font-size: 0.8em;
+    font-weight: 400;
+  }
+  .text {
+    display: none;
+  }
+  .main {
+    margin: 10px 0;
+  }
+  #hero h1 {
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width: 430px) {
+  nav a {
+    font-size: 0.6em;
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  .primary-cta, .secondary-cta, .tertiary-cta {
+    padding: 10px 15px;
+    font-weight: normal;
+    font-size: 0.8em;
+  }
+  .copy-one {
+    flex-basis: 90%;
+    padding: 100px 20px;
+  }
+  .copy-two {
+    flex-basis: 90%;
+    padding: 100px 20px;
+  }
+
 }
