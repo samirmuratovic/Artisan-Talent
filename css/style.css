@@ -811,6 +811,24 @@ tr:hover {
     padding: 10px;
     margin-bottom: 10px;
   }
+  .horizontal-line {
+    display: none;
+  }
+  #privacy-links {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; 
+  }
+  #social-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    /* padding: 10px 0; */
+  }
+  #copyright {
+    padding: 15px 0;
+    text-align: center;
+  }
 }
 
 @media(max-width: 460px) {
